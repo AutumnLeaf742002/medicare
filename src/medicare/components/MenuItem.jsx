@@ -28,7 +28,7 @@ export const MenuItem = ({ text = "no text", type = "dashboard", path="/home" })
     }
 
     return (
-        <NavLink to={path} className={({isActive})=>`flex items-center gap-4 text-base pl-5 h-12.5 ${isActive ? "bg-[var(--secondary-color)]":"bg-trasparent"}`}>
+        <NavLink to={path} className={({isActive})=>`flex items-center gap-4 text-base pl-5 h-12.5 transition hover:bg-white/10 ${isActive ? "bg-[var(--secondary-color)]":""}`}>
             <span className="text-lg">
                 <i className={icon}></i>
             </span>
