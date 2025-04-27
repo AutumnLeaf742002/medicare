@@ -1,1 +1,6 @@
 export * from "./Home"
+export * from "./Appointments"
+export * from "./Consult"
+export * from "./Medications"
+export * from "./Patients"
+export * from "./Settings"
