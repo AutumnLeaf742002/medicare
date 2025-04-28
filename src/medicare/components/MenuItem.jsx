@@ -28,8 +28,8 @@ export const MenuItem = ({ text = "no text", type = "dashboard", path="/home" })
     }
 
     return (
-        <NavLink to={path} className={({isActive})=>`flex items-center gap-4 text-base pl-5 h-12.5 transition hover:bg-white/10 ${isActive ? "bg-[var(--secondary-color)]":""}`}>
-            <span className="text-lg">
+        <NavLink to={path} className={({isActive})=>`flex items-center gap-4 text-base pl-5 h-12.5 transition-all ${isActive ? "bg-[var(--secondary-color)] pl-7 text-white":"hover:bg-white/10 hover:pl-7 text-gray-300"}`}>
+            <span className="text-[1.1rem]">
                 <i className={icon}></i>
             </span>
             {text}
