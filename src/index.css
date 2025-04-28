@@ -6,11 +6,14 @@
     --accent-color: #e74c3c;
     --light-color: #ecf0f1;
     --dark-color: #2c3e50;
+    
     --success-color: #27ae60;
     --warning-color: #f39c12;
     --danger-color: #e74c3c;
+
     --text-color: #333;
     --text-light: #7f8c8d;
+
     --border-color: #ddd;
     --background-color: #f5f7fa;
 }
