@@ -20,11 +20,11 @@ export const QuickAccessCard = ({ text="", type, path="/home" }) => {
     }
 
     return (
-        <NavLink to={path} className="bg-white rounded-lg shadow-lg w-full h-26 flex flex-col justify-center items-center gap-2 cursor-pointer border border-transparent hover:border-blue-300 transition-all hover:-translate-y-1">
+        <NavLink to={path} className="bg-white rounded-lg shadow-lg w-full min-w-30 h-26 flex flex-col justify-center items-center gap-2 cursor-pointer border border-transparent hover:border-blue-300 transition-all hover:-translate-y-1">
             <span className="text-3xl text-blue-500">
                 <i className={style}></i>
             </span>
-            <span className="text-base text-gray-700 font-semibold">
+            <span className="text-base text-gray-700 font-semibold truncate w-full text-center px-2" title={text}>
                 {text}
             </span>
         </NavLink>

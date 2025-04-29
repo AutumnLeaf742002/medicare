@@ -1,6 +1,15 @@
+import { useContext } from "react"
 import { NavLink } from "react-router"
 
+import { ExpandContext } from "../context/expand/ExpandContext"
+
 export const MenuItem = ({ text = "no text", type = "dashboard", path="/home" }) => {
+
+    const { setExpand } = useContext(ExpandContext)
+    
+    const onSelect = () => {
+        window.innerWidth <= 648 && setExpand(prev => !prev)
+    }
 
     let icon = ""
 
@@ -28,7 +37,7 @@ export const MenuItem = ({ text = "no text", type = "dashboard", path="/home" })
     }
 
     return (
-        <NavLink to={path} className={({isActive})=>`flex items-center gap-4 text-base pl-5 h-12.5 transition-all ${isActive ? "bg-[var(--secondary-color)] pl-7 text-white":"hover:bg-white/10 hover:pl-7 text-gray-300"}`}>
+        <NavLink onClick={onSelect} to={path} className={({isActive})=>`flex items-center gap-4 text-base pl-5 h-12.5 transition-all ${isActive ? "bg-[var(--secondary-color)] pl-7 text-white":"hover:bg-white/10 hover:pl-7 text-gray-300"}`}>
             <span className="text-[1.1rem]">
                 <i className={icon}></i>
             </span>

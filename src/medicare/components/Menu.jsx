@@ -1,8 +1,26 @@
+import { useContext, useState } from "react"
+
+import { ExpandContext } from "../context/expand/ExpandContext"
+
 import { MenuItem } from "./MenuItem"
 
 export const Menu = () => {
+
+    const { expandStyle, setExpand } = useContext(ExpandContext)
+
+    const onExpand = ()=> {
+        setExpand(prev => !prev)
+    }
+
     return (
-        <aside className="w-64 bg-[var(--primary-color)] text-[var(--light-color)] flex flex-col">
+        <aside className={`bg-[var(--primary-color)] text-[var(--light-color)] flex flex-col transition-all ${expandStyle}`}>
+
+            <span className="absolute text-2xl sm:hidden right-1 cursor-pointer hover:scale-120"
+                onClick={onExpand}
+            >
+                <i className="bi bi-x"></i>
+            </span>
+
             <header className="w-full h-20 border-b border-gray-600">
                 <span className="flex items-center h-full gap-2 pl-5">
                     <img src="/medicare/logo.svg" alt="MediCare logo"

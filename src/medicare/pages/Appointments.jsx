@@ -1,9 +1,11 @@
-import { HeaderContainer, HeaderTitle } from "../components";
+import { ExpandMenu, HeaderContainer, HeaderTitle } from "../components";
 
 export const Appointments = () => {
     return (
         <>
             <HeaderContainer>
+                <ExpandMenu />
+
                 <HeaderTitle>
                     <i className="bi bi-calendar-check-fill"></i>
                     Agenda de citas
