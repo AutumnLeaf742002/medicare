@@ -1,8 +1,9 @@
+import { MedicareLayout } from "../layout"
 import { HeaderTitle, Search, Notification, QuickAccessCard, NextAppointment, RecentPatients, ExpandMenu, HeaderContainer, Container } from "../components"
 
-export const Home = () => {
+export const HomePage = () => {
     return (
-        <>
+        <MedicareLayout>
             <HeaderContainer>
 
                 <ExpandMenu />
@@ -67,6 +68,6 @@ export const Home = () => {
                     <RecentPatients name="Javier Sánchez Pérez" age="60 años" lastVisit="2 semanas atrás" />
                 </div>
             </Container>
-        </>
+        </MedicareLayout>
     )
 }
