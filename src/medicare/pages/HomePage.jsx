@@ -1,5 +1,5 @@
 import { MedicareLayout } from "../layout"
-import { HeaderTitle, Search, Notification, QuickAccessCard, NextAppointment, RecentPatients, ExpandMenu, HeaderContainer, Container } from "../components"
+import { HeaderTitle, Title, Search, Notification, QuickAccessCard, NextAppointment, RecentPatients, ExpandMenu, HeaderContainer, Container } from "../components"
 
 export const HomePage = () => {
     return (
@@ -30,14 +30,14 @@ export const HomePage = () => {
             </Container>
 
             <Container>
-                <h1 className="text-lg font-bold text-gray-700 flex items-center gap-2">
+                <Title className="flex items-center gap-2">
                     <span>
                         <i className="bi bi-calendar-check-fill"></i>
                     </span>
                     <span>
                         Próximas Citas
                     </span>
-                </h1>
+                </Title>
 
                 <div className="w-full px-2 py-5 flex flex-col gap-3">
                     <NextAppointment type="success" name="María González López" description="Control de presión arterial" time="10:00 AM" />
@@ -47,14 +47,14 @@ export const HomePage = () => {
             </Container>
 
             <Container>
-                <h1 className="text-lg font-bold text-gray-700 flex items-center gap-2">
+                <Title className="flex items-center gap-2">
                     <span className="text-2xl">
                         <i className="bi bi-person-lines-fill"></i>
                     </span>
                     <span>
                         Pacientes Recientes
                     </span>
-                </h1>
+                </Title>
 
                 <div className="w-full px-2 py-5 grid gap-3 grid-cols-1 lg:grid-cols-4 xl:grid-cols-5">
                     <RecentPatients name="María González López" age="32 años" lastVisit="ayer" />

@@ -11,10 +11,11 @@
     --warning-color: #f39c12;
     --danger-color: #e74c3c;
 
-    --text-color: #333;
-    --text-light: #7f8c8d;
+    --text-header: #4a5252;
+    --text-color: #4d4d4d;
+    --text-muted: #b1b1b1;
 
-    --border-color: #ddd;
+    --border-color: #d1d5db;
     --background-color: #f5f7fa;
 }
 

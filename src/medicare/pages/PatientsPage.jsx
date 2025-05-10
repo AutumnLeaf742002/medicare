@@ -15,11 +15,11 @@ export const PatientsPage = () => {
                         Gestión de pacientes
                     </HeaderTitle>
 
-                    <span className="flex items-center gap-3 text-lg">
+                    <span className="flex flex-wrap justify-center items-center gap-3 text-lg">
                         <form>
                             <Search />
                         </form>
-                        <Button className="h-9 bg-[var(--secondary-color)]">
+                        <Button className="bg-[var(--secondary-color)]">
                             <i className="bi bi-person-plus-fill text-lg"></i>
                             Nuevo Paciente
                         </Button>
@@ -32,12 +32,12 @@ export const PatientsPage = () => {
 
                     <Select label="Última visita" options={[{ value: "anydate", text: "Cualquier fecha" }, { value: "lastweek", text: "Última semana" }, { value: "lastmonth", text: "Último mes" }, { value: "lastyear", text: "Último año" }]} />
 
-                    <Button className="h-9 w-40 bg-[var(--secondary-color)]">
+                    <Button className="bg-[var(--secondary-color)]">
                         <i className="bi bi-funnel-fill text-lg"></i>
                         Aplicar Filtros
                     </Button>
 
-                    <Button className="h-9 w-28 bg-[var(--secondary-color)]">
+                    <Button className="bg-[var(--secondary-color)]">
                         <i className="bi bi-arrow-clockwise text-lg"></i>
                         Reiniciar
                     </Button>

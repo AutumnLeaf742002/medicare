@@ -21,7 +21,7 @@ export const Menu = () => {
                 <i className="bi bi-x"></i>
             </span>
 
-            <header className="w-full h-20 border-b border-gray-600">
+            <header className="w-full h-20 border-b border-gray-500">
                 <span className="flex items-center h-full gap-2 pl-5">
                     <img src="/medicare/logo.svg" alt="MediCare logo"
                         className="w-10 h-10"

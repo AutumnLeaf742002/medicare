@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { NavLink } from "react-router"
+import { TextMuted } from "./TextMuted"
 
 export const PatientsTable = () => {
 
@@ -36,7 +37,7 @@ export const PatientsTable = () => {
 
     return (
         <div className="w-full">
-            <table className="overflow-hidden rounded-sm border-collapse w-full text-left bg-white">
+            <table className="overflow-hidden rounded-sm border-collapse w-full text-left bg-white text-[var(--text-color)]">
                 <thead>
                     <tr className="text-left">
                         <th className="font-semibold bg-gray-200 p-3">
@@ -112,7 +113,9 @@ export const PatientsTable = () => {
                     Anterior
                 </span>
                 <span className="text-gray-400 text-sm">
-                    Página {page} de 5
+                    <TextMuted>
+                        Página {page} de 5
+                    </TextMuted>
                 </span>
                 <span className="flex gap-2 text-base text-blue-500 cursor-pointer hover:underline underline-offset-2 select-none"
                     onClick={onNextPage}

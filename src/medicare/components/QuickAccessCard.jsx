@@ -1,10 +1,12 @@
 import { NavLink } from "react-router"
 
-export const QuickAccessCard = ({ text="", type, path="/home" }) => {
+import { Title, Text } from "./"
+
+export const QuickAccessCard = ({ text = "", type, path = "/home" }) => {
 
     let style = ""
 
-    switch(type){
+    switch (type) {
         case "consult":
             style = "bi bi-file-earmark-plus-fill"
             break
@@ -24,8 +26,10 @@ export const QuickAccessCard = ({ text="", type, path="/home" }) => {
             <span className="text-3xl text-blue-500">
                 <i className={style}></i>
             </span>
-            <span className="text-base text-gray-700 font-semibold truncate w-full text-center px-2" title={text}>
-                {text}
+            <span title={text}>
+                <Title className="text-sm font-semibold truncate w-full text-center px-2">
+                    {text}
+                </Title>
             </span>
         </NavLink>
     )
