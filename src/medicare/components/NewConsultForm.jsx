@@ -1,4 +1,4 @@
-import { InputDate, InputTime, InputText, SelectText, Text, InputArea } from "./"
+import { InputDate, InputTime, InputText, SelectText, InputArea, Medications } from "./"
 
 export const NewConsultForm = () => {
     return (
@@ -22,6 +22,8 @@ export const NewConsultForm = () => {
                 <InputArea label="Síntomas reportados" defaultValue="Describa los síntomas que reporta el paciente" />
                 <InputArea label="Diagnóstico *" defaultValue="Diagnóstico realizado" />
                 <InputArea label="Tratamiento sugerido" defaultValue="Tratamiento recomendado" />
+
+                <Medications />
             </span>
         </form>
     )
