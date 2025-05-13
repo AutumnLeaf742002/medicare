@@ -2,26 +2,7 @@ import { useState } from "react"
 
 import { Text, TextMuted, Medication, ButtonIcon } from "./"
 
-const initialMedications = [
-    {
-        id: 1,
-        name: "Loratadina",
-        dosage: "Cada 6 horas",
-        duration: "1 semana",
-        notes: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum amet molestias architecto error debitis nemo perferendis labore officia odio? Itaque veniam et molestias aperiam suscipit corrupti earum velit dolore. Doloremque a incidunt, rerum ea officiis assumenda sit non voluptatem repudiandae illo impedit explicabo expedita temporibus est facere maiores adipisci accusamus Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-    },
-    {
-        id: 2,
-        name: "Loratadina",
-        dosage: "Cada 6 horas",
-        duration: "1 semana",
-        notes: "Nada que agregar"
-    },
-]
-
-export const Medications = () => {
-
-    const [medications, setMedications] = useState(initialMedications)
+export const Medications = ({ medications, setMedications, showDialog = ()=>{} }) => {
 
     const deleteMedication = (id) => {
 
@@ -52,11 +33,7 @@ export const Medications = () => {
 
                     medications?.map((medication, index) => (
                         <Medication key={index}
-                            id={medication.id}
-                            name={medication.name}
-                            dosage={medication.dosage}
-                            duration={medication.duration}
-                            notes={medication.notes}
+                            {...medication}
                             deleteMedication={deleteMedication}
                         />
                     ))
@@ -66,7 +43,7 @@ export const Medications = () => {
             </div>
 
             <span>
-                <ButtonIcon className="text-sm">
+                <ButtonIcon className="text-sm" callback={showDialog}>
                     <i className="bi bi-plus-lg"></i>
                     Añadir Medicamento
                 </ButtonIcon>

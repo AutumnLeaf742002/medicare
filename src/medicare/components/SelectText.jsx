@@ -1,6 +1,6 @@
 import { Text } from "./"
 
-export const SelectText = ({ label = "no label", items = [] }) => {
+export const SelectText = ({ label = "no label", items = [], name="", value="", onInputChange = ()=>{} }) => {
     return (
         <span className="flex flex-col gap-2 w-full">
             <label>
@@ -10,6 +10,9 @@ export const SelectText = ({ label = "no label", items = [] }) => {
             </label>
             <select
                 className="h-9.5 outline-none border border-[var(--border-color)] rounded-md pl-4 focus:border-[var(--secondary-color)] transition-all text-sm"
+                name={name}
+                value={value}
+                onChange={onInputChange}
             >
                 <option className="text-[var(--text-color)]" value={0}>
                     Seleccionar Paciente...

@@ -1,6 +1,6 @@
 import { ButtonIcon, Text, TextMuted } from "./"
 
-export const Medication = ({ id=0, name, dosage, duration, notes, deleteMedication }) => {
+export const Medication = ({ id=0, name, dosage, duration, notes, deleteMedication, frecuency }) => {
 
     const onClick = () => {
         deleteMedication(id)
@@ -13,8 +13,11 @@ export const Medication = ({ id=0, name, dosage, duration, notes, deleteMedicati
                     <Text className="font-bold">
                         {name}
                     </Text>
-                    <Text>
+                    <Text className="font-bold">
                         {dosage}
+                    </Text>
+                    <Text>
+                        {frecuency}
                     </Text>
                     <Text>
                         -
