@@ -1,8 +1,18 @@
+import { useContext } from "react"
+import { AlertsContext } from "../context/Alerts"
+
 import { MedicareLayout } from "../layout"
 
 import { Button, Container, ExpandMenu, HeaderContainer, HeaderTitle, NewConsultForm } from "../components/"
 
 export const ConsultPage = () => {
+
+    const { newAlert } = useContext(AlertsContext)
+
+    const onSaveConsult = ()=>{
+        newAlert("success", "Nueva consulta guardada")
+    }
+
     return (
         <>
             <MedicareLayout>
@@ -19,7 +29,9 @@ export const ConsultPage = () => {
                             <i className="bi bi-x-circle-fill text-lg"></i>
                             Cancelar
                         </Button>
-                        <Button className="bg-[var(--secondary-color)]">
+                        <Button className="bg-[var(--secondary-color)]"
+                            callback={onSaveConsult}
+                        >
                             <i className="bi bi-floppy-fill"></i>
                             Guardar
                         </Button>

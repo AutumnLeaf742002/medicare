@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-
 import { Title } from "./Title"
 import { Button } from "./Button"
 

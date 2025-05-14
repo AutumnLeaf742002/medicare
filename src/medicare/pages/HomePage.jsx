@@ -2,6 +2,7 @@ import { MedicareLayout } from "../layout"
 import { HeaderTitle, Title, Search, Notification, QuickAccessCard, NextAppointment, RecentPatients, ExpandMenu, HeaderContainer, Container } from "../components"
 
 export const HomePage = () => {
+
     return (
         <MedicareLayout>
             <HeaderContainer>
